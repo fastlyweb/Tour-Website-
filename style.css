@@ -1237,3 +1237,35 @@ a.whatsapp-btn i {
         overflow: visible !important;
     }
 }
+
+/* Mobile Phones ke liye strict rule */
+@media screen and (max-width: 768px) {
+    body, html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Cards ko ek ke neechay ek laane ke liye */
+    .tours-grid, .services-container, .testimonials-track {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 10px !important;
+        width: 100% !important;
+        animation: none !important; /* Mobile par automatic scroll band */
+        transform: none !important;
+    }
+
+    /* Har card ki width mobile screen ke mutabiq 100% karne ke liye */
+    .tour-card, .service-box, .review-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .carousel-wrapper {
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
