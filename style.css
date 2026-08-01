@@ -1,0 +1,1193 @@
+/* ==========================================
+   AdventraHub - Complete Premium Dark Theme
+   ========================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #000000; /* Pure Black to blend your logo completely */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* Remove default link styling for logo link */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+/* Logo + Text Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    cursor: pointer;
+}
+
+/* Logo Image Styling */
+.brand-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Brand Text Styling */
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.brand-name span {
+    color: #94B4FF; /* Hub accent matches the new blue theme */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #94B4FF;
+}
+
+/* Updated Nav Button to requested Blue Color */
+.btn-nav {
+    text-decoration: none;
+    background: #94B4FF;
+    color: #121212;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-nav:hover {
+    background: #7ba2ff;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* Updated Main CTA Button to Blue */
+.btn-main {
+    text-decoration: none;
+    background: #94B4FF;
+    color: #121212;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-main:hover {
+    background: #7ba2ff;
+    transform: translateY(-2px);
+}
+
+/* Tours Section with Hover Animation */
+.tours-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #121212;
+}
+
+.tours-section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.tours-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Main Card Structure */
+.tour-card {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    background: #1a1a1a;
+}
+/* Har card ka structure ek jaisa rakhne ke liye */
+.tour-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Teeno cards ki height barabar rahegi */
+}
+
+/* Background Image */
+.tour-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+/* Hover Zoom Effect */
+.tour-card:hover .tour-img {
+    transform: scale(1.1);
+}
+
+/* Detail Box Overlay */
+.tour-hover-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.75) 65%, rgba(18, 18, 18, 0.2) 100%);
+    padding: 25px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    text-align: left;
+    transform: translateY(62%); 
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Slide-Up */
+.tour-card:hover .tour-hover-details {
+    transform: translateY(0);
+}
+
+.tour-hover-details h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.duration {
+    font-size: 13px;
+    color: #94B4FF; /* Updated to highlight blue */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transition-delay: 0.1s; 
+}
+
+.tour-card:hover .description {
+    opacity: 1;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2ecc71; 
+    margin-bottom: 15px;
+}
+
+/* Card Button Updated to Blue */
+.btn-book {
+    background: #94B4FF;
+    color: #121212;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-book:hover {
+    background: #7ba2ff;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #161d22, #0d0d0d);
+    color: #e0e0e0;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #bbbbbb;
+}
+
+/* Contact & Booking Section */
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #121212;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.booking-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input, .booking-form textarea {
+    padding: 14px;
+    background: #1a1a1a;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ffffff;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.booking-form input::placeholder, .booking-form textarea::placeholder {
+    color: #777777;
+}
+
+.booking-form input:focus, .booking-form textarea:focus {
+    outline: none;
+    border-color: #94B4FF;
+}
+
+.booking-form input[readonly] {
+    background: #202530;
+    color: #94B4FF;
+    border-color: #2d3a55;
+}
+
+/* Submit Form Button Updated to Blue */
+.btn-submit {
+    background: #94B4FF;
+    color: #121212;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background: #7ba2ff;
+    transform: translateY(-2px);
+}
+
+
+/* Mini Pop-up Container */
+.mini-popup {
+    display: none; /* Shuru me hidden */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 380px;
+    background-color: #0b0c10; /* Theme Dark */
+    border: 1px solid #1f2833;
+    border-radius: 12px;
+    padding: 20px 15px;
+    box-shadow: 0 10px 25px rgba(148, 180, 255, 0.15); /* Soft Blue Glow */
+    z-index: 99999;
+    transform: translateY(150px); /* Slide start point */
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy Slide effect */
+}
+
+/* Active Class for Smooth Slide In */
+.mini-popup.show {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Layout Setup */
+.mini-popup-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* Small Cool Floating Icon */
+.mini-icon {
+    font-size: 22px;
+    color: #94B4FF; /* Adventra Blue */
+    background: rgba(148, 180, 255, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseIcon 2s infinite;
+}
+
+/* Text & Form Container */
+.mini-text {
+    flex: 1;
+}
+
+.mini-text h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.mini-text p {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+/* Inline Compact Form */
+.mini-subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.mini-subscribe-form input {
+    flex: 1;
+    padding: 8px 12px;
+    background-color: #1f2833;
+    border: 1px solid #2d3748;
+    color: #ffffff;
+    border-radius: 6px;
+    outline: none;
+    font-size: 13px;
+    transition: border 0.3s;
+}
+
+.mini-subscribe-form input:focus {
+    border-color: #94B4FF;
+}
+
+.mini-subscribe-form button {
+    padding: 8px 14px;
+    background-color: #94B4FF;
+    color: #0b0c10;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mini-subscribe-form button:hover {
+    background-color: #ffffff;
+}
+
+/* Tiny Close Button */
+.close-mini-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close-mini-btn:hover {
+    color: #94B4FF;
+}
+
+/* Subtle icon pulse animation */
+@keyframes pulseIcon {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive for small mobile screens */
+@media (max-width: 480px) {
+    .mini-popup {
+        width: calc(100% - 30px);
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #555555;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    border-top: 1px solid #111111;
+}
+.site-footer, .site-footer * {
+    box-sizing: border-box;
+}
+
+.site-footer {
+    background-color: #0b0c10;
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    clear: both;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1f2833;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+/* Typography & Titles */
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #94B4FF;
+}
+
+.footer-logo span {
+    color: #ffffff;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer-column p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Lists Reset & Links */
+.footer-column ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px !important;
+    list-style-type: none !important;
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+.footer-column ul li a {
+    color: #aaaaaa !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: #94B4FF !important;
+    transform: translateX(5px);
+}
+
+/* Contact Info Icons Color */
+.contact-info li i {
+    color: #94B4FF;
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #1f2833;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0px 8px 15px rgba(148, 180, 255, 0.2);
+}
+
+.social-icons a.icon-fb:hover { background-color: #1877F2; }
+.social-icons a.icon-insta:hover { background-color: #E1306C; }
+.social-icons a.icon-tiktok:hover { background-color: #000000; border: 1px solid #00f2fe; }
+
+/* Newsletter Form Input & Button Styling */
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.subscribe-form input {
+    width: 80%;
+    padding: 12px;
+    background-color: #1f2833;
+    border: 1px solid #2d3748;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    width: 20%;
+    padding: 12px;
+    background-color: #94B4FF; /* Accent blue color */
+    border: none;
+    color: #0b0c10;
+    font-size: 14px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #ffffff;
+}
+
+/* Copyright & Payment Badges Flexbox Alignment */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    margin-top: 20px;
+    color: #666666;
+    font-size: 13px;
+}
+
+.payment-badges i {
+    font-size: 22px;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #aaaaaa;
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Featured Tours Section */
+.featured-tours {
+    padding: 60px 20px;
+    background-color: #0b0c10; /* Dark background matching theme */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.section-title h2 span {
+    color: #94B4FF; /* Logo Blue accent */
+}
+
+.section-title p {
+    color: #aaaaaa;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Grid Layout */
+.tours-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 10px;
+}
+
+/* Individual Tour Card */
+.tour-card {
+    background-color: #1f2833; /* Dark card block */
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Hover Effects */
+.tour-card:hover {
+    transform: translateY(-10px);
+    border-color: #94B4FF;
+    box-shadow: 0 12px 25px rgba(148, 180, 255, 0.15);
+}
+
+/* Tour Image Container */
+.tour-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.tour-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-img img {
+    transform: scale(1.08); /* Image zoom on hover */
+}
+
+/* Tag style (Best Seller / 10% OFF) */
+.tour-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #94B4FF;
+    color: #0b0c10;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* Tour Details Area */
+.tour-details {
+    padding: 20px;
+}
+
+.tour-details h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.tour-duration {
+    font-size: 13px;
+    color: #94B4FF;
+    margin: 0 0 15px 0;
+}
+
+.tour-duration i {
+    margin-right: 5px;
+}
+
+.tour-desc {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+    height: 63px; /* Stays uniform regardless of description length */
+    overflow: hidden;
+}
+
+/* Card Footer Flex (Price + Button) */
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #2d3748;
+    padding-top: 15px;
+}
+
+.tour-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.tour-price span {
+    font-size: 12px;
+    color: #aaaaaa;
+    font-weight: normal;
+}
+
+/* Details Button styling */
+.tour-btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #94B4FF;
+    color: #94B4FF;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tour-btn:hover {
+    background-color: #94B4FF;
+    color: #0b0c10;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 60px 20px;
+    background-color: #0b0c10; /* Matching theme dark background */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #1f2833; /* Soft separator from featured tours */
+}
+
+/* Container Layout */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+}
+
+/* Individual Service Box */
+.service-box {
+    flex: 1;
+    min-width: 280px;
+    background-color: #1f2833; /* Dark box tint */
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Box Hover Effects */
+.service-box:hover {
+    transform: translateY(-8px);
+    border-color: #94B4FF;
+    box-shadow: 0 10px 20px rgba(148, 180, 255, 0.1);
+}
+
+/* Icon Design */
+.service-icon {
+    font-size: 35px;
+    color: #94B4FF; /* Adventra Blue */
+    background: rgba(148, 180, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    border: 1px solid rgba(148, 180, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+/* Icon Spin/Scale on Box Hover */
+.service-box:hover .service-icon {
+    background-color: #94B4FF;
+    color: #0b0c10;
+    transform: rotate(360deg) scale(1.05);
+}
+
+/* Text Content Styling */
+.service-box h3 {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustments for Mobile */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #0b0c10;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #1f2833;
+}
+
+/* Flex Container Setup */
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+}
+
+/* Review Card Design */
+.review-card {
+    flex: 1;
+    min-width: 320px;
+    background-color: #1f2833;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Subtle Glow and Border Change on Hover */
+.review-card:hover {
+    border-color: #94B4FF;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(148, 180, 255, 0.08);
+}
+
+/* Review Header Alignment */
+.reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.reviewer-details h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+}
+
+/* Tour Destination Tag */
+.trip-tag {
+    font-size: 11px;
+    color: #94B4FF; /* Accent Blue */
+    background: rgba(148, 180, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+/* Golden Rating Stars */
+.stars i {
+    color: #FAD02C; /* Gold/Yellow color matching logo sun vibe */
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+/* Main Feedback Text */
+.review-text {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Mobile Screen Compatibility */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column;
+    }
+}
+/* Tours heading ko direct center karne ke liye */
+.featured-tours h2, .section-title h2 {
+    text-align: center !important;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+}
+/* Testimonials Section Base */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #0b0c10;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #1f2833;
+    overflow: hidden;
+}
+
+/* Hidden container wrapper */
+.carousel-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Moving Track */
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scrollLogos 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.carousel-wrapper:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+/* Review Card Styling */
+.review-card {
+    width: 350px;
+    background-color: #1f2833;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.reviewer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.reviewer-details h3 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+}
+
+.trip-tag {
+    font-size: 11px;
+    color: #94B4FF;
+    background: rgba(148, 180, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.stars i {
+    color: #FAD02C;
+    font-size: 12px;
+}
+
+.review-text {
+    font-size: 13.5px;
+    color: #aaaaaa;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Live Review Form Section */
+.add-review-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #1f2833;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.add-review-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #94B4FF;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.add-review-box input, .add-review-box textarea {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #0b0c10;
+    border: 1px solid #2d3748;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.add-review-box input:focus, .add-review-box textarea:focus {
+    border-color: #94B4FF;
+}
+
+.submit-review-btn {
+    background-color: #94B4FF;
+    color: #0b0c10;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submit-review-btn:hover {
+    background-color: white;
+}
+
+/* Infinite loop keyframe styling */
+@keyframes scrollLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+    .form-row { flex-direction: column; gap: 15px; }
+}
+
+/* Purani .whatsapp-btn ko delete kar ke ye paste karein */
+a.whatsapp-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    background-color: #25D366 !important; /* Proper WhatsApp Green */
+    color: #ffffff !important; /* Button text white hoga */
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+}
+
+/* Hover karne par color thoda dark aur dynamic border shadow */
+a.whatsapp-btn:hover {
+    background-color: #20ba5a !important;
+    color: #ffffff !important;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Icon ka color bhi white karne ke liye */
+a.whatsapp-btn i {
+    font-size: 18px !important;
+    color: #ffffff !important;
+}
